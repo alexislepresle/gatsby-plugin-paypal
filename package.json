@@ -1,0 +1,27 @@
+{
+  "name": "gatsby-plugin-paypal",
+  "version": "1.0.0",
+  "description": "Add a paypal sell button to your Gatsby site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexislepresle/gatsby-plugin-paypal.git"
+  },
+  "keywords": [
+    "gatsby",
+    "paypal",
+    "gatsby-plugin"
+  ],
+  "author": "alexislepresle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexislepresle/gatsby-plugin-paypal/issues"
+  },
+  "homepage": "https://github.com/alexislepresle/gatsby-plugin-paypal#readme",
+  "dependencies": {
+    "gatsby": "^2.24.91"
+  }
+}
