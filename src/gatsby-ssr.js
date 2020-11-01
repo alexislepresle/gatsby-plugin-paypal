@@ -2,10 +2,6 @@ import React from 'react';
 
 export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
 
-    if (process.env.NODE_ENV !== `production`) {
-        return null;
-    }
-
     if (!pluginOptions.clientId) {
         return null;
     }
