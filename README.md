@@ -1,6 +1,6 @@
 # gatsby-plugin-paypal
 
-####[In the process of creation]
+#### [In the process of creation]
 
 Add a paypal sell button to your Gatsby site.
 
