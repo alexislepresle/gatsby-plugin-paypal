@@ -1,10 +1,13 @@
 {
   "name": "gatsby-plugin-paypal",
-  "version": "1.0.1",
+  "version": "1.0.15",
   "description": "Add a paypal sell button to your Gatsby site.",
   "main": "index.js",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir .",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,13 +18,26 @@
     "paypal",
     "gatsby-plugin"
   ],
-  "author": "alexislepresle",
+  "author": "Alexis Lepresle <contact@alexislepresle.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alexislepresle/gatsby-plugin-paypal/issues"
   },
   "homepage": "https://github.com/alexislepresle/gatsby-plugin-paypal#readme",
   "dependencies": {
-    "gatsby": "^2.24.91"
+    "@babel/runtime": "^7.6.3",
+    "jest": "^26.6.1",
+    "react": "^16.10.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "babel-preset-gatsby-package": "^0.5.2",
+    "cross-env": "^7.0.2"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.24.55",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   }
 }
