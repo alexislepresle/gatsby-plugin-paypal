@@ -32,12 +32,12 @@ module.exports = {
 
 ## Options
 
-### `clientId`
+# `clientId`
 
 Your PayPal Client ID.
 You will find it on: https://developer.paypal.com/developer/applications/
 
-### `currency`
+# `currency`
 
 The currency of the transaction.	
 
