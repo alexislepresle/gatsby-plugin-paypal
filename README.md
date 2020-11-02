@@ -2,7 +2,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-smart-payment-buttons.svg)](https://www.npmjs.com/package/gatsby-plugin-paypal/)
 
 <p align="center">
-    <img alt="Gatsby-Shopify-theme" src="https://github.com/alexislepresle/gatsby-plugin-paypal/blob/master/ressources/gatsby-paypal.png" width="250" />
+    <img alt="Gatsby-Shopify-theme" src="https://github.com/alexislepresle/gatsby-plugin-paypal/blob/master/ressources/gatsby-paypal.png" width="400" />
 </p>
 
 # gatsby-plugin-paypal
@@ -75,12 +75,12 @@ export default PaylpalButton
 | `createOrder`             | `(data, actions) => any`  | See [createOrder](https://developer.paypal.com/docs/checkout/integrate/#5-capture-the-transaction) |
 | `onApprove`               | `(data, actions) => any`  | See [onApprove](https://developer.paypal.com/docs/checkout/integration-features/funding-failure/)  |
 | `onSuccess`               | `function`                | See [createOrder](https://developer.paypal.com/docs/checkout/integrate/#5-capture-the-transaction) |
-| `onError`                 | `(error) => any`          | See[onError](https://developer.paypal.com/docs/checkout/integration-features/handle-errors)        |
-| `onCancel`                | `(data) => any`           | See[onCancel](https://developer.paypal.com/docs/checkout/integration-features/cancellation-page/)  |
+| `onError`                 | `(error) => any`          | See [onError](https://developer.paypal.com/docs/checkout/integration-features/handle-errors)        |
+| `onCancel`                | `(data) => any`           | See [onCancel](https://developer.paypal.com/docs/checkout/integration-features/cancellation-page/)  |
 | `shippingPreference`      | `string`                  | (soon)                                                                                             |
 | `catchError`              | `function`                | (soon)                                                                                             |
 | `createSubscription`      | `function`                | (soon)                                                                                             |
-| `style`                   | `object`                  | See[Customize the PayPal Buttons](https://developer.paypal.com/docs/checkout/integration-features/customize-button) |
+| `style`                   | `object`                  | See [Customize the PayPal Buttons](https://developer.paypal.com/docs/checkout/integration-features/customize-button) |
 
 
 ## Contribution
