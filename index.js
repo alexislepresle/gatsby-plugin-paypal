@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Paypal = ({
+const Paypal = (
   createOrder,
   onApprove,
   onCancel,
@@ -13,7 +13,7 @@ const Paypal = ({
   shippingPreference,
   catchError,
   createSubscription,
-}) => {
+) => {
 
   const createOrderPaypal = (data, actions) => {
     return actions.order.create({
