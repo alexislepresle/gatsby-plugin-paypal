@@ -2,7 +2,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-smart-payment-buttons.svg)](https://www.npmjs.com/package/gatsby-plugin-paypal/)
 
 <p align="center">
-    <img alt="Gatsby-Shopify-theme" src="https://github.com/alexislepresle/gatsby-plugin-paypal/raw/master/resources/gatsby-paypal.png" width="250" />
+    <img alt="Gatsby-Shopify-theme" src="https://github.com/alexislepresle/gatsby-plugin-paypal/blob/master/ressources/gatsby-paypal.png" width="250" />
 </p>
 
 # gatsby-plugin-paypal
