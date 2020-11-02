@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 const Paypal = (props) => {
 
-  console.log(props)
-
   const createOrderPaypal = (data, actions) => {
     return actions.order.create({
       purchase_units: [
@@ -25,18 +23,11 @@ const Paypal = (props) => {
     });
   }
   const onApprovePaypal = (data, actions) => {
-    return actions.order
-      .capture()
-      .then((details) => {
-        if (props.onSuccess) {
-          return onSuccess(details, data);
-        }
-      })
-      .catch((err) => {
-        if (props.catchError) {
-          return catchError(err);
-        }
-      });
+    return actions.order.capture().then((details) => {
+      return onSuccess(details, data);
+    }).catch((err) => {
+      return onError(err);
+    })
   }
 
   const onErrorPaypal = (err) => {
@@ -49,7 +40,7 @@ const Paypal = (props) => {
         .Buttons({
           ...props,
           createOrder: (props.createOrder ? props.createOrder : createOrderPaypal),
-          onApprove: (props.onApprove ? props.onApprove: onApprovePaypal),
+          onApprove: (props.onApprove ? props.onApprove : onApprovePaypal),
           onError: (props.onError ? props.onError : onErrorPaypal),
         })
         .render('#paypal-button');
@@ -67,16 +58,15 @@ const Paypal = (props) => {
 
 Paypal.propTypes = {
   amount: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
+    PropTypes.number,
+    PropTypes.string,
   ]),
   currency: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
+    PropTypes.number,
+    PropTypes.string,
   ]),
   shippingPreference: PropTypes.string,
   onSuccess: PropTypes.func,
-  catchError: PropTypes.func,
   onError: PropTypes.func,
   createOrder: PropTypes.func,
   createSubscription: PropTypes.func,
@@ -85,6 +75,7 @@ Paypal.propTypes = {
 };
 Paypal.defaultProps = {
   style: {},
+  currency: 'USD',
   shippingPreference: "GET_FROM_FILE",
 };
 

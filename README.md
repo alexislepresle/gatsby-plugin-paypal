@@ -68,19 +68,18 @@ export default PaylpalButton
 ## Additional props of Paypal component
 
 
-| Name                      | Type                      | Description                                                                                        |
-| ------------------------- | ------------------------- | -------------------------------------------------------------------------------------------------- |
-| `amount`                  | `string`                  | The amount value of the transaction.                                                               |
-| `currency`                | `string`                  | The PayPal JavaScript SDK defaults to `USD`                                                        |
-| `createOrder`             | `(data, actions) => any`  | See [createOrder](https://developer.paypal.com/docs/checkout/integrate/#5-capture-the-transaction) |
-| `onApprove`               | `(data, actions) => any`  | See [onApprove](https://developer.paypal.com/docs/checkout/integration-features/funding-failure/)  |
-| `onSuccess`               | `function`                | See [createOrder](https://developer.paypal.com/docs/checkout/integrate/#5-capture-the-transaction) |
-| `onError`                 | `(error) => any`          | See [onError](https://developer.paypal.com/docs/checkout/integration-features/handle-errors)        |
-| `onCancel`                | `(data) => any`           | See [onCancel](https://developer.paypal.com/docs/checkout/integration-features/cancellation-page/)  |
-| `shippingPreference`      | `string`                  | (soon)                                                                                             |
-| `catchError`              | `function`                | (soon)                                                                                             |
-| `createSubscription`      | `function`                | (soon)                                                                                             |
-| `style`                   | `object`                  | See [Customize the PayPal Buttons](https://developer.paypal.com/docs/checkout/integration-features/customize-button) |
+| Name                      | Type                      | Description                                                                                        | Default        |
+| ------------------------- | ------------------------- | -------------------------------------------------------------------------------------------------- | -------------- |
+| `amount`                  | `string`                  | The amount value of the transaction.                                                               |                |
+| `currency`                | `string`                  | The currency of the transaction.                                                                   | `USD`          |
+| `createOrder`             | `(data, actions) => any`  | See [createOrder](https://developer.paypal.com/docs/checkout/integrate/#5-capture-the-transaction) |                |
+| `onApprove`               | `(data, actions) => any`  | See [onApprove](https://developer.paypal.com/docs/checkout/integration-features/funding-failure/)  |                |
+| `onSuccess`               | `function`                | See [createOrder](https://developer.paypal.com/docs/checkout/integrate/#5-capture-the-transaction) |                |
+| `onError`                 | `(error) => any`          | See [onError](https://developer.paypal.com/docs/checkout/integration-features/handle-errors)       |                |
+| `onCancel`                | `(data) => any`           | See [onCancel](https://developer.paypal.com/docs/checkout/integration-features/cancellation-page/) |                |
+| `shippingPreference`      | `string`                  | The shipping preferences. The possible values are: -`NO_SHIPPING`:  Redact shipping address fields from the PayPal pages. Recommended for digital goods. - `GET_FROM_FILE` :  Use the buyer-selected shipping address. - `SET_PROVIDED_ADDRESS` :  Use the merchant-provided address. Buyer cannot change the address on the PayPal pages. If the merchant does not pass an address, the buyer can choose the address on PayPal pages.    | `GET_FROM_FILE`        |
+| `createSubscription`      | `(data, actions) => any`                | See [createSubscription](https://developer.paypal.com/docs/subscriptions/integrate/#4-create-a-subscription)                                                                                        |
+| `style`                   | `object`                  | See [Customize the PayPal Buttons](https://developer.paypal.com/docs/checkout/integration-features/customize-button) | `{}` |
 
 
 ## Contribution
