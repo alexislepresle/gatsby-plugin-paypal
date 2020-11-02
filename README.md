@@ -2,7 +2,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/gatsby-plugin-paypal.svg)](https://www.npmjs.com/package/gatsby-plugin-paypal/)
 
 <p align="center">
-    <img alt="Gatsby-Paypal-Plugin" src="https://github.com/alexislepresle/gatsby-plugin-paypal/blob/master/ressources/gatsby-paypal.png" width="400" />
+    <img alt="Gatsby-Paypal-Plugin" src="https://raw.githubusercontent.com/alexislepresle/gatsby-plugin-paypal/master/ressources/gatsby-paypal.png" width="400" />
 </p>
 
 # gatsby-plugin-paypal
