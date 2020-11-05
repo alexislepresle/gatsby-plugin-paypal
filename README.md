@@ -23,7 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-paypal`,
       options: {
         clientId: `YOUR_CLIENT_ID`,
-        currently: `EUR` // Optional
+        currency: `EUR` // Optional
       }
     }
   ]
