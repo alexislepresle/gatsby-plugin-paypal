@@ -1,12 +1,12 @@
-import { onPreRenderHTML } from '../src/gatsby-ssr';
+import { onRenderBody } from '../src/gatsby-ssr';
 
 describe("gatsby-plugin-ssr", () => {
     describe("onPreRenderHTML", () => {
         describe("in non production env", () => {
             test("does not set meta tag", () => {
-                const getHeadComponents = jest.fn();
-                onPreRenderHTML({ getHeadComponents, replaceHeadComponents });
-                expect(getHeadComponents).not.toHaveBeenCalled();
+                const setHeadComponents = jest.fn();
+                onRenderBody({ setHeadComponents });
+                expect(setHeadComponents).not.toHaveBeenCalled();
             });
         });
         describe("in production env", () => {
@@ -19,28 +19,24 @@ describe("gatsby-plugin-ssr", () => {
                 process.env.NODE_ENV = env;
             });
             const setup = options => {
-                const getHeadComponents = jest.fn();
+                const setHeadComponents = jest.fn();
                 options = Object.assign({}, options);
     
-                onPreRenderHTML({ getHeadComponents }, options);
+                onRenderBody({ setHeadComponents }, options);
                 return {
-                    getHeadComponents
+                    setHeadComponents
                 };
             };
-    
-            it("set without clientId option", () => {
-                const { getHeadComponents } = setup();
-                expect(getHeadComponents).toHaveBeenCalledTimes(0);
-            });
+
     
             it("set with clientId option", () => {
                 const options = {
                     clientId: "idclient-000-jfjfjf"
                 };
-                const { getHeadComponents } = setup(
+                const { setHeadComponents } = setup(
                     options
                 );
-                expect(getHeadComponents).toHaveBeenCalledTimes(1);
+                expect(setHeadComponents).toHaveBeenCalledTimes(1);
             });
 
                 
@@ -49,10 +45,10 @@ describe("gatsby-plugin-ssr", () => {
                     clientId: "idclient-000-jfjfjf",
                     currency: "EUR"
                 };
-                const { getHeadComponents } = setup(
+                const { setHeadComponents } = setup(
                     options
                 );
-                expect(getHeadComponents).toHaveBeenCalledTimes(1);
+                expect(setHeadComponents).toHaveBeenCalledTimes(1);
             });
         });
     });

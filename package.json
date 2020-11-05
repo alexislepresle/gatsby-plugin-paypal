@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-paypal",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "Add a paypal sell button to your Gatsby site.",
   "main": "index.js",
   "private": false,
