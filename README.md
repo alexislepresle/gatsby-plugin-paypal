@@ -48,6 +48,7 @@ The vault status of the transaction. If set to true:
   - Shows only funding sources that you can add to the vault
   - Set up a billing agreement, reference transaction, or subscription.
 
+
 ## How to Use Paypal component
 
 This is what a component using gatsby-plugin-paypal might look like:
