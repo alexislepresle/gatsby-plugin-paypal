@@ -23,7 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-paypal`,
       options: {
         clientId: `YOUR_CLIENT_ID`,
-        currency: `EUR` // Optional
+        currency: `EUR`, // Optional
         vault: true // Optional
       }
     }
@@ -41,6 +41,12 @@ You will find it on: https://developer.paypal.com/developer/applications/
 #### `currency`
 
 The currency of the transaction.	
+
+#### `vault`
+
+The vault status of the transaction. If set to true:
+  - Shows only funding sources that you can add to the vault
+  - Set up a billing agreement, reference transaction, or subscription.
 
 ## How to Use Paypal component
 
