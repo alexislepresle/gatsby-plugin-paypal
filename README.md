@@ -24,6 +24,7 @@ module.exports = {
       options: {
         clientId: `YOUR_CLIENT_ID`,
         currency: `EUR` // Optional
+        vault: true // Optional
       }
     }
   ]

@@ -14,6 +14,10 @@ export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
         src = src + `&currency=USD`
     }
 
+    if (pluginOptions.vault) {
+        src = src + `&vault=true`
+    }
+
     const sdkPaypal = (
         <script key="paypal-script" src={src} data-sdk-integration-source="button-factory"></script>
     );
