@@ -57,7 +57,7 @@ This is what a component using gatsby-plugin-paypal might look like:
 import React from "react"
 import Paypal from "gatsby-plugin-paypal"
 
-const PaylpalButton = () => (
+const PaypalButton = () => (
     <Paypal 
       style={{
         shape: 'rect',
@@ -70,7 +70,7 @@ const PaylpalButton = () => (
     />
 )
 
-export default PaylpalButton
+export default PaypalButton
 ```
 
 ## Additional props of Paypal component
