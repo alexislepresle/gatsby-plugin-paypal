@@ -2,7 +2,7 @@ import React from 'react';
 
 export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
 
-    if (!pluginOptions.clientId) {
+    if (!pluginOptions?.clientId) {
         return null;
     }
 
