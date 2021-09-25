@@ -72,6 +72,8 @@ Paypal.propTypes = {
   createSubscription: PropTypes.func,
   onApprove: PropTypes.func,
   style: PropTypes.object,
+  onInit: PropTypes.func,
+  onClick: PropTypes.func
 };
 Paypal.defaultProps = {
   style: {},
